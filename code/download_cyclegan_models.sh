@@ -13,8 +13,8 @@ declare -a arr=("apple2orange", "orange2apple", "summer2winter_yosemite",
 
 for FILE in "${arr[@]}"
 do
-   mkdir -p ./checkpoints/${FILE}_pretrained
-   MODEL_FILE=./checkpoints/${FILE}_pretrained/latest_net_G.pth
+   mkdir -p ./autogan/checkpoints/${FILE}_pretrained
+   MODEL_FILE=./autogan/checkpoints/${FILE}_pretrained/latest_net_G.pth
    URL=http://efrosgans.eecs.berkeley.edu/cyclegan/pretrained_models/$FILE.pth
 
    wget -N $URL -O $MODEL_FILE
